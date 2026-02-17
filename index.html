@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flori'Touch | Bijoux personnalisés</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" href="#">Flori'Touch</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#creations">Créations</a></li>
+                <li><a href="#personnalisation">Personnalisation</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Panier -->
+            <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+                🛒 <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header id="accueil">
+        <div class="hero-content">
+            <span class="hero-tag">✨ Fait main avec amour</span>
+            <h1>Flori'Touch</h1>
+            <p class="hero-sub">La touche qui sublime votre style</p>
+            <div class="hero-btns">
+                <a class="btn btn-primary" href="#creations">Découvrir</a>
+                <a class="btn btn-secondary"
+                   href="https://wa.me/22999551400?text=Bonjour%20Flori'Touch%20😊%20Je%20souhaite%20passer%20une%20commande.">
+                    Commander sur WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-decor">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+        </div>
+    </header>
+
+    <!-- ===== PRODUITS ===== -->
+    <section id="creations">
+        <span class="section-tag">Collection</span>
+        <h2>Nos Créations</h2>
+        <p class="section-sub">Chaque pièce est unique, fabriquée à la main avec passion</p>
+
+        <div class="products">
+
+            <div class="product" data-id="1" data-name="Bracelet personnalisé" data-price="2500">
+                <div class="product-img-wrap">
+                    <img src="bracelet.jpg" alt="Bracelet personnalisé"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">💎</div>
+                    <div class="product-badge">Bestseller</div>
+                </div>
+                <div class="product-info">
+                    <h3>Bracelet personnalisé</h3>
+                    <p>Bracelets en perles avec prénom, faits main.</p>
+                    <div class="product-footer">
+                        <span class="price">2 500 FCFA</span>
+                        <button class="btn btn-add" onclick="addToCart(1, 'Bracelet personnalisé', 2500)">+ Panier</button>
+                    </div>
+                    <a class="btn btn-order"
+                       href="https://wa.me/22999551400?text=Bonjour%2C%20je%20veux%20commander%20un%20Bracelet%20personnalis%C3%A9%20%F0%9F%92%9C">
+                        Commander sur WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product" data-id="2" data-name="Porte-clés en perles" data-price="1500">
+                <div class="product-img-wrap">
+                    <img src="porte-cle.jpg" alt="Porte-clés en perles"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">🔑</div>
+                    <div class="product-badge new">Nouveau</div>
+                </div>
+                <div class="product-info">
+                    <h3>Porte-clés en perles</h3>
+                    <p>Porte-clés élégants et personnalisables.</p>
+                    <div class="product-footer">
+                        <span class="price">1 500 FCFA</span>
+                        <button class="btn btn-add" onclick="addToCart(2, 'Porte-clés en perles', 1500)">+ Panier</button>
+                    </div>
+                    <a class="btn btn-order"
+                       href="https://wa.me/22999551400?text=Bonjour%2C%20je%20veux%20commander%20un%20Porte-cl%C3%A9s%20en%20perles%20%F0%9F%94%91">
+                        Commander sur WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product" data-id="3" data-name="Collier personnalisé" data-price="3500">
+                <div class="product-img-wrap">
+                    <div class="img-placeholder" style="display:flex">📿</div>
+                    <div class="product-badge">Populaire</div>
+                </div>
+                <div class="product-info">
+                    <h3>Collier personnalisé</h3>
+                    <p>Colliers fins avec pendentif prénom ou initiale.</p>
+                    <div class="product-footer">
+                        <span class="price">3 500 FCFA</span>
+                        <button class="btn btn-add" onclick="addToCart(3, 'Collier personnalisé', 3500)">+ Panier</button>
+                    </div>
+                    <a class="btn btn-order"
+                       href="https://wa.me/22999551400?text=Bonjour%2C%20je%20veux%20commander%20un%20Collier%20personnalis%C3%A9%20%F0%9F%93%BF">
+                        Commander sur WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== PERSONNALISATION ===== -->
+    <section id="personnalisation" class="section-alt">
+        <span class="section-tag">Sur mesure</span>
+        <h2>Personnalisation</h2>
+        <p class="section-sub">Créez votre bijou unique selon vos envies</p>
+
+        <form id="personalizationForm" class="custom-form">
+            <div class="form-group">
+                <label for="prenom">Prénom à graver</label>
+                <input type="text" id="prenom" placeholder="Ex: Amina" maxlength="15">
+            </div>
+            <div class="form-group">
+                <label for="produit">Type de bijou</label>
+                <select id="produit">
+                    <option value="">Choisir le produit</option>
+                    <option value="bracelet">Bracelet</option>
+                    <option value="porte-cles">Porte-clés</option>
+                    <option value="collier">Collier</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Couleur principale</label>
+                <div class="color-picker">
+                    <label class="color-opt"><input type="radio" name="couleur" value="rose"><span class="swatch rose" title="Rose"></span>Rose</label>
+                    <label class="color-opt"><input type="radio" name="couleur" value="blanc"><span class="swatch blanc" title="Blanc"></span>Blanc</label>
+                    <label class="color-opt"><input type="radio" name="couleur" value="violet"><span class="swatch violet" title="Violet"></span>Violet</label>
+                    <label class="color-opt"><input type="radio" name="couleur" value="dore"><span class="swatch dore" title="Doré"></span>Doré</label>
+                    <label class="color-opt"><input type="radio" name="couleur" value="turquoise"><span class="swatch turquoise" title="Turquoise"></span>Turquoise</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message spécial (optionnel)</label>
+                <textarea id="message" placeholder="Ex: Pour offrir en cadeau d'anniversaire..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Valider ma personnalisation ✨</button>
+        </form>
+
+        <div class="info-strip">
+            <span>⏳ 2 à 4 jours de fabrication</span>
+            <span>💕 Fait main avec amour</span>
+            <span>📦 Livraison disponible</span>
+        </div>
+    </section>
+
+    <!-- ===== GALERIE ===== -->
+    <section id="galerie">
+        <span class="section-tag">Inspirations</span>
+        <h2>Notre Galerie</h2>
+        <p class="section-sub">Quelques-unes de nos plus belles réalisations</p>
+
+        <div class="gallery-carousel">
+            <button class="carousel-btn prev" id="prevBtn">&#8249;</button>
+            <div class="carousel-track-wrap">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="gallery-item"><div class="gal-placeholder">💎 Bracelet Or</div></div>
+                    <div class="gallery-item"><div class="gal-placeholder">📿 Collier Perles</div></div>
+                    <div class="gallery-item"><div class="gal-placeholder">🔑 Porte-clés Rose</div></div>
+                    <div class="gallery-item"><div class="gal-placeholder">💜 Bracelet Violet</div></div>
+                    <div class="gallery-item"><div class="gal-placeholder">🤍 Collier Blanc</div></div>
+                    <div class="gallery-item"><div class="gal-placeholder">✨ Coffret Cadeau</div></div>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
+    <!-- ===== AVIS ===== -->
+    <section id="avis" class="section-alt">
+        <span class="section-tag">Témoignages</span>
+        <h2>Ce que disent nos clientes</h2>
+        <p class="section-sub">La satisfaction de nos clientes est notre fierté</p>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Le bracelet avec le prénom de ma fille est magnifique ! La qualité est incroyable et la livraison très rapide. Je recommande vivement !"</p>
+                <div class="reviewer"><span class="avatar">A</span><strong>Amina K.</strong></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"J'ai commandé un porte-clés personnalisé comme cadeau. Ma meilleure amie a adoré ! Je reviendrai sûrement !"</p>
+                <div class="reviewer"><span class="avatar">F</span><strong>Fatou M.</strong></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Superbe boutique ! Les bijoux sont vraiment faits avec amour. Le service client sur WhatsApp est très réactif."</p>
+                <div class="reviewer"><span class="avatar">S</span><strong>Sara D.</strong></div>
+            </div>
+        </div>
+
+        <!-- Formulaire avis -->
+        <div class="review-form-wrap">
+            <h3>Laissez votre avis</h3>
+            <form id="reviewForm">
+                <div class="form-row">
+                    <input type="text" id="reviewName" placeholder="Votre prénom" required>
+                    <div class="star-rating" id="starRating">
+                        <span data-val="1">★</span><span data-val="2">★</span>
+                        <span data-val="3">★</span><span data-val="4">★</span>
+                        <span data-val="5">★</span>
+                    </div>
+                </div>
+                <textarea id="reviewText" placeholder="Votre avis..." rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary">Publier mon avis 💬</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section id="apropos">
+        <span class="section-tag">Notre histoire</span>
+        <h2>À Propos de Flori'Touch</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Flori'Touch est une boutique artisanale née d'une passion profonde pour la création et la beauté des petits détails. Chaque bijou est fabriqué à la main, avec amour et précision.</p>
+                <p>Notre mission : vous offrir une pièce unique qui vous ressemble, qui raconte votre histoire ou celle des personnes que vous aimez.</p>
+                <p>Basée à Cotonou, nous livrons partout et répondons à vos commandes via WhatsApp avec réactivité et sourire 💕</p>
+                <ul class="about-values">
+                    <li>🌸 Artisanat 100% fait main</li>
+                    <li>💎 Matériaux de qualité sélectionnés</li>
+                    <li>🎁 Emballage cadeau disponible</li>
+                    <li>⚡ Réponse rapide sur WhatsApp</li>
+                </ul>
+            </div>
+            <div class="about-visual">
+                <div class="about-img-placeholder">
+                    <span>🌸</span>
+                    <p>Flori'Touch<br><small>Fait main depuis 2024</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section-alt">
+        <span class="section-tag">Nous rejoindre</span>
+        <h2>Contact</h2>
+        <p class="section-sub">On est là pour vous ! N'hésitez pas à nous écrire</p>
+
+        <div class="contact-grid">
+            <a class="contact-card" href="https://wa.me/22999551400">
+                <span class="contact-icon">📲</span>
+                <strong>WhatsApp</strong>
+                <span>99 55 14 00</span>
+            </a>
+            <a class="contact-card" href="tel:0153077023">
+                <span class="contact-icon">📞</span>
+                <strong>Téléphone</strong>
+                <span>01 53 07 70 23</span>
+            </a>
+            <div class="contact-card">
+                <span class="contact-icon">⏰</span>
+                <strong>Horaires</strong>
+                <span>Lun–Sam : 8h–20h</span>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">📦</span>
+                <strong>Délai</strong>
+                <span>2 à 4 jours ouvrés</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Flori'Touch</span>
+                <p>La touche qui sublime votre style</p>
+            </div>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#creations">Créations</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#avis">Avis</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Flori'Touch — Fait avec 💕
+            <!-- Logo admin visible — 3 clics pour accéder -->
+            <span id="adminLogoBtn" title="Flori'Touch Admin">
+                <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     style="vertical-align:middle; cursor:pointer; transition:transform 0.3s, filter 0.3s; display:inline-block; margin-left:10px;">
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#e8a0b8" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#e8a0b8" transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#e8a0b8" transform="rotate(120 50 50)"/>
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#f3c6d3" transform="rotate(30 50 50)"/>
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#f3c6d3" transform="rotate(90 50 50)"/>
+                    <ellipse cx="50" cy="28" rx="10" ry="18" fill="#f3c6d3" transform="rotate(150 50 50)"/>
+                    <circle cx="50" cy="50" r="13" fill="#c85c82"/>
+                    <text x="50" y="55" text-anchor="middle" font-size="14" fill="white" font-family="serif" font-weight="bold">F</text>
+                </svg>
+            </span>
+        </div>
+    </footer>
+
+    <!-- Indicateur clics admin -->
+    <div id="adminClickHint" style="
+        position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+        background:rgba(42,26,34,0.88); color:white; padding:10px 24px;
+        border-radius:30px; font-size:14px; font-family:'Jost',sans-serif;
+        opacity:0; pointer-events:none; transition:opacity 0.3s; z-index:9999;
+        white-space:nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    "></div>
+
+    <!-- ===== PANIER SIDEBAR ===== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 Mon Panier</h3>
+            <button id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Votre panier est vide 🌸</p>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">Total : <strong id="cartTotal">0 FCFA</strong></div>
+            <a id="cartWhatsapp" href="#" class="btn btn-primary" target="_blank">
+                Commander sur WhatsApp 📲
+            </a>
+        </div>
+    </aside>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
